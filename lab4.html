@@ -1,0 +1,48 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+	<style type="text/css">
+		h1{color:red;text-align:center;}
+		body{background-color:PaleGreen; font-weight:bold;}
+		input{font-weight:bold;}
+	</style>
+	<script>
+	function bio()
+	{
+		Hisfamil = document.getElementById("famiy").value;
+		hisname = document.getElementById("name").value;
+		otchestvo = document.getElementById("ot").value;
+		year = document.getElementById("year").value;
+		mesto = document.getElementById("born").value;
+		likedo = document.getElementById("like").value;
+		dontlikedo = document.getElementById("nolike").value;
+		var win = window.open("","","width=800,height=500");
+		win.document.open();
+		
+		str = "<h1>О себе</h1><hr><P>";
+		str+="Я, "+Hisfamil+" "+hisname+" "+otchestvo+" родился в "+year+" в городе "+mesto+" <br><br> Больше всего я люблю "+likedo+" и очень не люблю мыть посуду. Было бы замечательно, всю жизнь только "+likedo+", но к сожалению приходится иногда и "+dontlikedo+".";
+		str += "<br><input type='button' value='Закрыть' onclick='window.close()'>";
+		win.document.write(str);
+		win.document.close();
+	}
+	</script>
+	
+</head>
+<body>
+<h1>Анкета</h1>
+<hr>
+	<form>
+	<table>
+		<tr><td>Фамилия:</td><td><input type="text" id="famiy"></td></tr>
+		<tr><td>Имя:</td><td><input type="text" id="name"</td></tr>
+		<tr><td>Отчество:</td><td><input type="text" id="ot"</td></tr>
+		<tr><td>Год рождения:</td><td><input type="text" id="year"</td></tr>
+		<tr><td>Место рождения:</td><td><input type="text" id="born"</td></tr>
+		<tr><td>Любимое занятие</td><td><input type="text" id="like"</td></tr>
+		<tr><td>Не любимое занятие</td><td><input type="text" id="nolike"</td></tr>
+	</table>
+	<input type=button value="Сформировать биографию" Onclick="bio()">
+	</form>
+<hr>
+</body>
+</html>

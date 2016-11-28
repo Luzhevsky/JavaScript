@@ -1,0 +1,47 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+	<style type="text/css">
+		h1{color:red;text-align:center;}
+		body{background-color:PaleGreen; font-weight:bold;}
+		input{font-weight:bold;}
+	</style>
+	<script>
+	function bio()
+	{
+		hisname = document.getElementById("name").value;
+		likedo = document.getElementById("like").value;
+		hisfriend = document.getElementById("friend").value;
+		likepresent = document.getElementById("present").value;
+		var win = window.open("","","width=800,height=500");
+		win.document.open();
+		
+		str = "<h1>"+hisname+" и "+likepresent+"</h1><hr><P>";
+		str+="В одном лесу жила маленькая "+hisname+", которая очень любила петь чудесные песни.";
+		str+="У нее так хорошо получалось, что весь лес собирался послушать ее! От сороки она"; 
+		str+= " узнала, что у людей принято дарить "+likepresent+" любимым исполнителям. А "+likepresent+" она";
+		str+= " любила также сильно, как и "+likedo+". Долго грустила "+hisname+". Но однажды, после ";
+		str+= " очередного импровизированного концерта, "+hisfriend+" подлетел к "+hisname+" и подарил";
+		str+= " ей цветы! Уж он то был истинным джентельменом! "+hisname+" была невероятно счастлива!!!";
+		str += "<br><input type='button' value='Закрыть' onclick='window.close()'>";
+		win.document.write(str);
+		win.document.close();
+	}
+	</script>
+	
+</head>
+<body>
+<h1>Анкета</h1>
+<hr>
+	<form>
+	<table>
+		<tr><td>Имя:</td><td><input type="text" id="name"</td></tr>
+		<tr><td>Любимое занятие:</td><td><input type="text" id="like"</td></tr>
+		<tr><td>Друг героя:</td><td><input type="text" id="friend"</td></tr>
+		<tr><td>Любимый подарок:</td><td><input type="text" id="present"</td></tr>
+	</table>
+	<input type=button value="Сформировать биографию" Onclick="bio()">
+	</form>
+<hr>
+</body>
+</html>
