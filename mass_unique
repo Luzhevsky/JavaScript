@@ -1,0 +1,20 @@
+var numbers = [1, 4, 5, 9, 2, 5, 1];
+var uniqueNumbers = [];
+
+
+for(var i = 0; i < numbers.length; i++){
+  var f = numbers[i];
+  var k = 0;
+  
+  for(var j = 0 ; j < numbers.length; j++){
+      if(f === numbers[j]){
+        k++;
+      }  
+  }  
+  if(k == 1){
+    uniqueNumbers.push(f);
+  }
+  
+}
+console.log(uniqueNumbers);
+
